@@ -2,19 +2,19 @@ def input_temperature(temp_str: str) -> int | None:
     try:
         temp: int = int(temp_str)
 
-        if temp > 40:
-            print(
-                f"Input data is '{temp}'\n"
-                f"Caught input_temperature error: {temp}°C is "
-                f"too hot for plants (max 40°C)"
-            )
-            return None
-
-        elif temp < 0:
+        if temp < 0:
             print(
                 f"Input data is '{temp}'\n"
                 f"Caught input_temperature error: {temp}°C is too "
                 f"cold for plants (min 0°C)"
+            )
+            return None
+        
+        elif temp > 40:
+            print(
+                f"Input data is '{temp}'\n"
+                f"Caught input_temperature error: {temp}°C is "
+                f"too hot for plants (max 40°C)"
             )
             return None
 
